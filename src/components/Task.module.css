@@ -20,7 +20,7 @@
 .checkContainer {
   min-width: 1.125rem;
   height: 1.125rem;
-  background: none;
+  background: transparent;
   border: 0;
 }
 
@@ -29,4 +29,10 @@
   height: 100%;
   border: 2px solid var(--blue-100);
   border-radius: 50%;
+}
+
+.deleteTask {
+  background: transparent;
+  border: 0;
+  color: var(--gray-300);
 }
