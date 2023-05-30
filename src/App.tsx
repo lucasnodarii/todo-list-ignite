@@ -36,14 +36,28 @@ export function App() {
   function deleteTask(taskId: string){
     const newTasks = tasks.filter(task => task.id !== taskId)
     setTasks(newTasks)
+  }
 
+  function toogleTaskDone (taskId: string){
+    const newTasks = tasks.map(task => {
+      if(task.id === taskId){
+        return {
+          ...task, 
+          isDone: !task.isDone
+        }
+      }
+      return task
+    })
+    setTasks(newTasks);
   }
 
   return (
     <>
       <Header onAddTask={addTask} /> 
       <Tasks
-      tasks={tasks} onDelete={deleteTask}/>
+      tasks={tasks} 
+      onDelete={deleteTask}
+      onDone={toogleTaskDone}/>
     </>
   )
 }
