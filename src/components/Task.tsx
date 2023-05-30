@@ -4,16 +4,17 @@ import { TaskInterface } from '../App'
 
 interface TaskProps {
   task: TaskInterface;
+  onDelete: (taskId:string) => void;
 }
 
-export function Task({task}: TaskProps) {
+export function Task({task, onDelete}: TaskProps) {
   return (
     <div className={styles.task}>
       <button className={styles.checkContainer}>
         <div/>
       </button>
       <p>{task.content}</p>
-      <button className={styles.deleteTask}><Trash size={20}/></button>
+      <button className={styles.deleteTask} onClick={() => onDelete(task.id)}><Trash size={20}/></button>
     </div>
   )
 }
