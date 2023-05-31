@@ -10,18 +10,7 @@ export interface TaskInterface {
 }
 
 export function App() {
-  const [tasks, setTasks] = useState<TaskInterface[]>([
-    {
-      id: uuid(),
-      content: "Teste teste",
-      isDone: true
-    },
-    {
-      id: uuid(),
-      content: "Teste teste 2",
-      isDone: false
-    }
-  ])
+  const [tasks, setTasks] = useState<TaskInterface[]>([])
 
   function addTask (taskContent: string){
     const newTasks = [...tasks, {

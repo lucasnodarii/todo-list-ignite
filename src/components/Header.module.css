@@ -26,6 +26,12 @@
   border: 1px solid var(--gray-700);
   border-radius: 8px;
   padding: 0 1rem;  
+  outline: 
+}
+
+.newTaskForm input:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 2px var(--purple-200);
 }
 
 .newTaskForm input::placeholder {
@@ -44,4 +50,8 @@
   gap: 0.5rem;
   font-weight: 700;
   font-size: 0.875rem;
+}
+
+.newTaskForm button:hover {
+  background: var(--blue-100);
 }
